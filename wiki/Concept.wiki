@@ -8,18 +8,18 @@ JCompare is a library which provides functionality of comparing given two direct
 = Details =
 
 Statuses for files:
-* UNCHECKED
-* SAME
-* OLD
-* NEW
-* ORPHAN
+  * UNCHECKED
+  * SAME
+  * OLD
+  * NEW
+  * ORPHAN
 
 Status for folders:
-* UNCHECKED
-* SAME
-* ORPHAN
-* NEW
-* OLD
+  * UNCHECKED
+  * SAME
+  * ORPHAN
+  * NEW
+  * OLD
 
 Folders can have multiple statuses from the status list
 
@@ -27,5 +27,5 @@ There will be a compare tree encompassing the left and right trees and will repr
 
 Algorithms will be needed for
 
-* Making a combined list of folder contents
-* Comparing the folders and files and flagging states
+  * Making a combined list of folder contents
+  * Comparing the folders and files and flagging states
