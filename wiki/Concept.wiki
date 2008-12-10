@@ -1,0 +1,14 @@
+#Concept of JCompare Library.
+
+= Introduction =
+
+JCompare is a library which provides functionality of comparing given two directories recursively and provide comparison of the folders.  This makes getting the differences of the two folder paths like newer files, orphan files 
+
+
+= Details =
+
+The identified states of the files and folders 
+  * NEW
+  * OLD
+  * ORPHAN
+  * ORPHAN
