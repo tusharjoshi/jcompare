@@ -7,6 +7,12 @@ JCompare is a library which provides functionality of comparing given two direct
 
 = Details =
 
+There will be two folder paths to start with.
+
+We will fill the tree structure with the folder name as the top node and the children of that folder as the child nodes of the root.  The trees will only be filled till here.
+
+Each node from the left tree will be compared with corresponding node of the right tree and flagged with a status
+
 Statuses for files:
   * UNCHECKED
   * SAME
