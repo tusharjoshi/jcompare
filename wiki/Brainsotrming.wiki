@@ -27,5 +27,11 @@ There will be a compare tree encompassing the left and right trees and will repr
 
 == Algorithms will be needed for ==
 
-* Making a combined list of folder contents
-* Comparing the folders and files and flagging states
+ * Making a combined list of folder contents
+ * Comparing the folders and files and flagging states
+
+== Design Process to follow ==
+ * Make a use case diagram
+ * Component diagram
+ * Analysis and class diagram
+ * Start coding initial classes
