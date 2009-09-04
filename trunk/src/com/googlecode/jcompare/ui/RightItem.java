@@ -22,8 +22,9 @@
  * THE SOFTWARE.
  */
 
-package com.googlecode.jcompare;
+package com.googlecode.jcompare.ui;
 
+import com.googlecode.jcompare.*;
 import com.googlecode.jcompare.model.Item;
 import java.beans.PropertyChangeListener;
 import javax.swing.tree.TreePath;
@@ -32,9 +33,9 @@ import javax.swing.tree.TreePath;
  *
  * @author Tushar Joshi <tusharvjoshi@gmail.com>
  */
-public class LeftItem implements Item {
+public class RightItem implements Item {
     private final Item item;
-    public LeftItem( Item item) {
+    public RightItem( Item item) {
         this.item = item;
     }
 
@@ -52,7 +53,7 @@ public class LeftItem implements Item {
     }
 
     public int getLeftState() {
-        return item.getLeftState();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public void setLeftState(int state) {
@@ -60,7 +61,7 @@ public class LeftItem implements Item {
     }
 
     public int getRightState() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return item.getRightState();
     }
 
     public void setRightState(int state) {
@@ -68,7 +69,7 @@ public class LeftItem implements Item {
     }
 
     public String getName() {
-        if( item.getLeftState() == Item.STATE_NOTAVAILABLE) {
+        if( item.getRightState() == Item.STATE_NOTAVAILABLE) {
             return item.getName();
         } else {
             return item.getName();
@@ -116,7 +117,7 @@ public class LeftItem implements Item {
     }
 
     public Item getChild(int index) {
-        return new LeftItem(item.getChild(index));
+        return new RightItem(item.getChild(index));
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
@@ -127,18 +128,6 @@ public class LeftItem implements Item {
         //
     }
 
-    public static TreePath getTreePath(TreePath treePath) {
-        Object[] pathObjects = treePath.getPath();
-        int length = pathObjects.length;
-        Object[] newPath = new Object[length];
-
-        
-        for( int index = length - 1; index >= 0 ; index-- ) {
-            newPath[index] = new LeftItem(((RightItem)pathObjects[index]).getItem());
-        }
-
-        return new MyTreePath(newPath,newPath.length);
-    }
-
 
 }
+

@@ -23,6 +23,7 @@
  */
 package com.googlecode.jcompare;
 
+import com.googlecode.jcompare.ui.JCompareWindow;
 import com.googlecode.jcompare.model.Item;
 import com.googlecode.jcompare.model.impl.ItemImpl;
 import java.io.File;
@@ -300,19 +301,11 @@ public class JCompare {
             Logger.getLogger(JCompare.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        final Item item = new ItemImpl();
-
-        item.setLeftPath("E:\\test1");
-        item.setRightPath("E:\\test2");
-        item.setName("");
-        item.setLeaf(false);
-
-        compare(item);
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JCompareWindow window = new JCompareWindow(item);
+                JCompareWindow window = new JCompareWindow();
                 window.setVisible(true);
+                window.setPaths("e:\\test1","e:\\test2");
             }
         });
     }
