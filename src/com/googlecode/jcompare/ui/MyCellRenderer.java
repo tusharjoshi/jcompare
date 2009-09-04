@@ -21,8 +21,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.googlecode.jcompare;
+package com.googlecode.jcompare.ui;
 
+import com.googlecode.jcompare.*;
 import com.googlecode.jcompare.model.Item;
 import com.googlecode.jcompare.resources.IconUtils;
 import java.awt.Color;

@@ -22,8 +22,9 @@
  * THE SOFTWARE.
  */
 
-package com.googlecode.jcompare;
+package com.googlecode.jcompare.ui;
 
+import com.googlecode.jcompare.*;
 import com.googlecode.jcompare.model.Item;
 import javax.swing.event.TreeModelListener;
 import javax.swing.tree.TreeModel;
