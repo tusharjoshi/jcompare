@@ -1,8 +1,12 @@
 #summary Related Products / competition
 
+=Comparison of Related Products=
+
 || Software || Provider || License || Cost || Platform ||
+|| [http://code.google.com/p/jcompare JCompare] || JCompare Team || MIT || $0 || Win/Mac/Lin ||
 || [http://www.guiffy.com/ Guiffy] || . || Commercial || $39 || Win/Mac/Lin ||
 || [http://www.scootersoftware.com Beyond Compare] || Scooter Softwares || Commercial || $45 || Win ||
 || [http://www.ajcsoft.com/ProductsAJCDirSync.php AJC Directory Synchronizer] || AJC Software || Commercial || $29 || Win ||
 || [http://www.oorjasoftware.com/ Swift Compare] || Oorja Software || Commercial || $27 || Win ||
 || [http://www.ultraedit.com/products/ultracompare.html Untra Compare] || IDN Computer Solutions || Commercial || $40 || Win ||
+|| [http://beyond-sync.smartcode.com/info.html Beyond Sync 2.1 || Smart Code || Commercial || $25 || Win ||
