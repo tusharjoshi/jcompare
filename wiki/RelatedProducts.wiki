@@ -10,4 +10,4 @@
 || [http://www.oorjasoftware.com/ Swift Compare] || Oorja Software || Commercial || $27 || Win ||
 || [http://www.ultraedit.com/products/ultracompare.html Untra Compare] || IDN Computer Solutions || Commercial || $40 || Win ||
 || [http://beyond-sync.smartcode.com/info.html Beyond Sync 2.1] || Smart Code || Commercial || $25 || Win ||
-|| [http://www.foldermatch.com/index.htm Folder Match || || Commercial || $35 || Win ||
+|| [http://www.foldermatch.com/index.htm Folder Match] || || Commercial || $35 || Win ||
