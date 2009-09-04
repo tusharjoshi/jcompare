@@ -1,4 +1,5 @@
 #summary Related Products / competition
 
- * http://www.guiffy.com/
- * http://www.scootersoftware.com
+|| Software || Provider || License || Cost ||
+|| [http://www.guiffy.com/ Guiffy] || . || Commercial || $39 ||
+|| [http://www.scootersoftware.com Beyond Compare] || Scooter Softwares || Commercial || $45 ||
