@@ -26,6 +26,7 @@ package com.googlecode.jcompare.model.impl;
 import com.googlecode.jcompare.model.Item;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,29 +36,32 @@ import java.util.List;
  */
 public class ItemImpl implements Item {
 
-    private int leftState;
-    private int rightState;
+    private Item parentItem = null;
+    private State leftState;
+    private State rightState;
     private String name;
     private String leftPath;
     private String rightPath;
     private boolean leaf;
+    private WeakReference leftData = null;
+    private WeakReference rightData = null;
     private PropertyChangeSupport propertyChangeSupport =
             new PropertyChangeSupport(this);
     private List<Item> itemList = new ArrayList<Item>();
 
-    public int getLeftState() {
+    public State getLeftState() {
         return this.leftState;
     }
 
-    public void setLeftState(int state) {
+    public void setLeftState(State state) {
         this.leftState = state;
     }
 
-    public int getRightState() {
+    public State getRightState() {
         return this.rightState;
     }
 
-    public void setRightState(int state) {
+    public void setRightState(State state) {
         this.rightState = state;
     }
 
@@ -113,31 +117,8 @@ public class ItemImpl implements Item {
         propertyChangeSupport.removePropertyChangeListener(listener);
     }
 
-    public String getStateDescription(int state) {
-        String description = "";
-
-        switch( state ) {
-            case Item.STATE_UNCHECKED:
-                description = "UNCHECKED";
-                break;
-            case Item.STATE_NEW:
-                description = "NEW";
-                break;
-            case Item.STATE_OLD:
-                description = "OLD";
-                break;
-            case Item.STATE_SAME:
-                description = "SAME";
-                break;
-            case Item.STATE_ORPHAN:
-                description = "ORPHAN";
-                break;
-            case Item.STATE_NOTAVAILABLE:
-                description = "NOT AVAILABLE";
-                break;
-        }
-
-        return description;
+    public String getStateDescription(State state) {
+        return state.toString();
     }
 
     @Override
@@ -177,5 +158,41 @@ public class ItemImpl implements Item {
 
     public void clearChildren() {
         itemList.clear();
+    }
+
+    public Object getLeftData() {
+        Object data =  null;
+        if( null != leftData ) {
+            data = leftData.get();
+        }
+        return data;
+    }
+
+    public void setLeftData(Object data) {
+        if( null != data ) {
+            this.leftData = new WeakReference(data);
+        }
+    }
+
+    public Object getRightData() {
+        Object data =  null;
+        if( null != rightData ) {
+            data = rightData.get();
+        }
+        return data;
+    }
+
+    public void setRightData(Object data) {
+        if( null != data ) {
+            this.rightData = new WeakReference(data);
+        }
+    }
+
+    public Item getParent() {
+        return parentItem;
+    }
+
+    public void setParent(Item parentItem) {
+        this.parentItem = parentItem;
     }
 }

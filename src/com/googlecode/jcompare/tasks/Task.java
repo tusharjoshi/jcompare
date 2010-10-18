@@ -27,7 +27,5 @@ package com.googlecode.jcompare.tasks;
  *
  * @author Tushar Joshi <tusharvjoshi@gmail.com>
  */
-public interface Task {
-
-    public void execute(ProgressMonitor progressMonitor);
+public interface Task extends Runnable {
 }

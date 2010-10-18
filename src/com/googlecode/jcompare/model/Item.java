@@ -39,15 +39,22 @@ public interface Item {
     public static final int STATE_NOTAVAILABLE = 5;
     public static final int STATE_NEWOLD = 6;
 
-    public String getStateDescription(int state);
+    public static interface State {
+    }
 
-    public int getLeftState();
+    public Item getParent();
 
-    public void setLeftState(int state);
+    public void setParent(Item parentItem);
 
-    public int getRightState();
+    public String getStateDescription(State state);
 
-    public void setRightState(int state);
+    public State getLeftState();
+
+    public void setLeftState(State state);
+
+    public State getRightState();
+
+    public void setRightState(State state);
 
     public String getName();
 
@@ -72,6 +79,14 @@ public interface Item {
     public void addChild(Item childItem);
 
     public Item getChild(int index);
+
+    public Object getLeftData();
+
+    public void setLeftData(Object data);
+
+    public Object getRightData();
+
+    public void setRightData(Object data);
 
     public void addPropertyChangeListener(PropertyChangeListener listener);
 
